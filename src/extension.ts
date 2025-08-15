@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerTextEditorCommand(
-    'extension.selectWholeWordVS',
+    'extension.selectCurrentWordVS',
     (editor) => {
       const doc = editor.document;
       const selections: vscode.Selection[] = [];

@@ -1,0 +1,11 @@
+.design/**
+assets-src/**
+scripts/**
+*.cmd
+*.sh
+.vscode/**
+src/**
+**/*.map
+out/test/**
+Thumbs.db
+.DS_Store
