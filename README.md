@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon.png" alt="Select Current Word (VS-like)" width="128">
+</p>
+
 # Select Current Word (VS-like)
 
 Highlights the whole word under the cursor, like `Edit.SelectCurrentWord` in Visual Studio.
