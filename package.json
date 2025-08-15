@@ -1,18 +1,39 @@
 {
-  "name": "vscodeselectword",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "select-current-word-vs",
+  "displayName": "Select Current Word (VS-like)",
+  "publisher": "FI-Mihej",
+  "version": "0.0.1",
+  "description": "Highlights the whole word under the cursor, like `Edit.SelectCurrentWord` in Visual Studio",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:extension.selectCurrentWordVS"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "extension.selectCurrentWordVS", "title": "Select Current Word (VS-like)" }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.selectCurrentWordVS",
+        "key": "Ctrl+Shift+Alt+Space",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "package": "vsce package",
+    "vscode:prepublish": "npm run compile"
+  },
   "devDependencies": {
-    "@types/vscode": "^1.102.0",
-    "@vscode/vsce": "^3.6.0",
-    "typescript": "^5.9.2"
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.5.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FI-Mihej/VSCode-Select-Current-Word.git"
   }
 }
